@@ -14,7 +14,7 @@ function List-InstalledPackages {
     Write-Host "0: Return to main menu"
     Write-Host "------------------------------------------------"
     
-    $packages = choco list --local-only
+    $packages = choco list
     $index = 1
     
     foreach ($package in $packages[1..($packages.Length-3)]) {
@@ -32,7 +32,7 @@ function Uninstall-ChocoPackage {
     Write-Host "0: Return to main menu"
     Write-Host "------------------------------------------------"
     
-    $packages = choco list --local-only
+    $packages = choco list
     $packageList = $packages[1..($packages.Length-3)]
     $index = 1
     
